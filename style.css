@@ -6,11 +6,11 @@ ul {
 li > * {
   vertical-align: middle;
 }
-li, 
+li,
 h3 {
   list-style: none;
 }
-input, 
+input,
 button {
   outline: none;
 }
@@ -38,17 +38,15 @@ button {
 }
 
 @media (max-width: 768px) {
-
   .matrix {
     text-align: center;
   }
-
 }
 
 .todo-list {
   display: block;
   width: 500px;
-  margin: 0 auto ;
+  margin: 0 auto;
   padding-top: 15px;
 }
 
