@@ -19,29 +19,37 @@ input, button {
   color: #333;
   font-family: Lato, sans-serif;
 }
+
 .matrix {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
+
 .matrix__img{
   width: 100%;
 }
+
 .matrix__link {
   font-family: fantasy, cursive;
 }
+
 @media (max-width: 768px) {
+
   .matrix {
     text-align: center;
   }
+
 }
+
 .todo-list {
   display: block;
   width: 500px;
   margin: 0 auto ;
   padding-top: 15px;
 }
+
 .todo-list__text {
   width: 56%;
   display: inline-block;
