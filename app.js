@@ -9,8 +9,8 @@
 
 var taskInput = document.querySelector(".todo-list__input-add"); //Add a new task.
 var addButton = document.getElementsByTagName("button")[0]; //first button
-var incompleteTaskHolder = document.getElementById("incomplete-tasks"); //ul of #incompleteTasks
-var completedTasksHolder = document.getElementById("completed-tasks"); //completed-tasks
+var incompleteTaskHolder = document.querySelector(".todo-list__incomplete-tasks"); //ul of #incompleteTasks
+var completedTasksHolder = document.querySelector(".todo-list__completed-tasks"); //completed-tasks
 
 //New task list item
 var createNewTaskElement = function (taskString) {
@@ -44,7 +44,7 @@ var createNewTaskElement = function (taskString) {
   deleteButton.className = "todo-list__button todo-list__button_delete";
   deleteButtonImg.src = "./remove.svg";
   deleteButtonImg.alt = "delete";
-  deleteButtonImg.classList = "todo-list__img-delete";
+  deleteButtonImg.classList = "todo-list__img_delete";
   deleteButton.appendChild(deleteButtonImg);
 
   //and appending.
@@ -80,7 +80,7 @@ var editTask = function () {
   var editInput = listItem.querySelector("input[type=text]");
   var label = listItem.querySelector("label");
   var editBtn = listItem.querySelector(".todo-list__button_edit");
-  var containsClass = editInput.classList.contains("todo-list__input-active");
+  var containsClass = editInput.classList.contains("todo-list__input_active");
   //If class of the parent is .editmode
   if (containsClass) {
     //switch to .editmode
@@ -93,7 +93,7 @@ var editTask = function () {
   }
 
   //toggle .editmode on the parent.
-  editInput.classList.toggle("todo-list__input-active");
+  editInput.classList.toggle("todo-list__input_active");
   label.classList.toggle("todo-list__text_none");
 };
 
@@ -161,6 +161,7 @@ for (var i = 0; i < incompleteTaskHolder.children.length; i++) {
   //bind events to list items chldren(tasksCompleted)
   bindTaskEvents(incompleteTaskHolder.children[i], taskCompleted);
 }
+
 
 //cycle over completedTasksHolder ul list items
 for (var i = 0; i < completedTasksHolder.children.length; i++) {
